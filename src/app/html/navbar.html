@@ -1,0 +1,12 @@
+<nav class="navbar">
+  <div class="nav-brand">🌲 Échappée Sylvestre</div>
+  <ul class="nav-links">
+    <!-- Utilisation de routerLink au lieu de href pour une SPA Angular -->
+    <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Accueil</a></li>
+    <li><a routerLink="/projet" routerLinkActive="active">Le projet</a></li>
+    <li><a routerLink="/foret-gestion" routerLinkActive="active">Les forêts en gestion</a></li>
+    <li><a routerLink="/evenement" routerLinkActive="active">Événements</a></li>
+    <li><a routerLink="/rejoindre" routerLinkActive="active">Nous rejoindre</a></li>
+    <li><a routerLink="/blog" routerLinkActive="active">Blog</a></li>
+  </ul>
+</nav>

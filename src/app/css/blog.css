@@ -1,0 +1,107 @@
+.blog-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.blog-container h1 {
+    text-align: center;
+    color: #2d5a27;
+    margin-bottom: 30px;
+}
+
+.admin-toggle {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.btn-toggle-admin {
+    background: #e0a96d;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Style des cartes articles */
+.article-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-top: 4px solid #2d5a27;
+}
+
+.media-container img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.article-content {
+    padding: 25px;
+}
+
+.article-date {
+    font-size: 0.85rem;
+    color: #777;
+    font-weight: bold;
+}
+
+.article-content h2 {
+    color: #2d5a27;
+    margin: 10px 0 15px 0;
+}
+
+.article-content p {
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Formulaire Admin */
+.admin-form-card {
+    background: #f4f6f0;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border-left: 5px solid #2d5a27;
+}
+
+.admin-form-card input, .admin-form-card textarea, .admin-form-card select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-save { background: #2d5a27; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; }
+.btn-cancel { background: #777; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; }
+
+.admin-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.btn-edit { background: #e0a96d; color: white; border: none; padding: 5px 12px; border-radius: 4px; cursor: pointer; font-size: 0.8rem; }
+.btn-delete { background: #bc4749; color: white; border: none; padding: 5px 12px; border-radius: 4px; cursor: pointer; font-size: 0.8rem; }
+.btn-add { background: #4a7c59; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; font-weight: bold; margin-bottom: 20px; }
+
+.no-articles {
+    text-align: center;
+    color: #777;
+    font-style: italic;
+    margin-top: 40px;
+}

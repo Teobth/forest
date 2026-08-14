@@ -1,0 +1,72 @@
+<div class="blog-container">
+    <h1>Le Journal de la Forêt (Blog)</h1>
+
+    <!-- Bouton mode admin -->
+    <div class="admin-toggle">
+        <button (click)="modeAdmin = !modeAdmin" class="btn-toggle-admin">
+            {{ modeAdmin ? 'Fermer le mode Admin' : '⚙️ Mode Admin' }}
+        </button>
+    </div>
+
+    <!-- Formulaire Admin (Ajout / Modification) -->
+    @if (modeAdmin) {
+        <div class="admin-form-card">
+            <h3>{{ enModeEdition ? 'Modifier l\'article' : 'Rédiger un nouvel article' }}</h3>
+            <form (ngSubmit)="sauvegarderArticle()">
+                <input type="text" placeholder="Titre de l'article" [(ngModel)]="articleEnCours.titre" name="titre" required>
+                <input type="date" [(ngModel)]="articleEnCours.date" name="date" required>
+                
+                <select [(ngModel)]="articleEnCours.typeMedia" name="typeMedia">
+                    <option value="aucun">Aucun média</option>
+                    <option value="image">Image (URL)</option>
+                    <option value="video">Vidéo (Lien YouTube/Intégration)</option>
+                </select>
+
+                <input *ngIf="articleEnCours.typeMedia !== 'aucun'" type="text" placeholder="URL de l'image ou lien de la vidéo" [(ngModel)]="articleEnCours.urlMedia" name="urlMedia">
+
+                <textarea placeholder="Contenu de l'article..." [(ngModel)]="articleEnCours.contenu" name="contenu" rows="6" required></textarea>
+                
+                <div class="form-actions">
+                    <button type="submit" class="btn-save">Enregistrer l'article</button>
+                    <button type="button" (click)="modeAdmin = false" class="btn-cancel">Annuler</button>
+                </div>
+            </form>
+        </div>
+    }
+
+    <!-- Bouton Nouvel Article en mode admin -->
+    <div *ngIf="modeAdmin" class="add-btn-container">
+        <button (click)="ouvrirFormulaireAjout()" class="btn-add">+ Nouvel article</button>
+    </div>
+
+    <!-- Liste des articles -->
+    <div class="articles-list" *ngIf="!modeAdmin">
+        <article *ngFor="let art of articles" class="article-card">
+            <!-- Affichage du Média si présent -->
+            <div *ngIf="art.typeMedia === 'image' && art.urlMedia" class="media-container">
+                <img [src]="art.urlMedia" [alt]="art.titre">
+            </div>
+            
+            <div *ngIf="art.typeMedia === 'video' && art.urlMedia" class="media-container video-wrapper">
+                <iframe [src]="art.urlMedia" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <!-- Contenu textuel -->
+            <div class="article-content">
+                <span class="article-date">Publié le {{ art.date }}</span>
+                <h2>{{ art.titre }}</h2>
+                <p>{{ art.contenu }}</p>
+
+                <!-- Actions Admin sur l'article -->
+                <div class="admin-actions">
+                    <button (click)="ouvrirFormulaireEdition(art)" class="btn-edit">Modifier</button>
+                    <button (click)="supprimer(art.id)" class="btn-delete">Supprimer</button>
+                </div>
+            </div>
+        </article>
+
+        <div *ngIf="articles.length === 0" class="no-articles">
+            Aucun article pour le moment. Enfilez vos bottes, la rédaction va commencer !
+        </div>
+    </div>
+</div>

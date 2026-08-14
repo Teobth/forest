@@ -1,0 +1,57 @@
+/* En-tête / Bannière (Hero) */
+.hero-section {
+    background: linear-gradient(rgba(26, 54, 26, 0.6), rgba(26, 54, 26, 0.6)), 
+                url('https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #2e5a27;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #3b7332;
+}
+
+/* Contenu principal de la page d'accueil */
+.home-main {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.intro-card, .benefits-card {
+    background: white;
+    padding: 40px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+h2 {
+    color: #2e5a27;
+    border-bottom: 2px solid #a3c1ad;
+    padding-bottom: 10px;
+    margin-top: 0;
+}

@@ -1,0 +1,64 @@
+<div class="events-container">
+    <h1>Agenda des Événements Sylvestres</h1>
+
+    <!-- Bouton pour basculer en mode admin -->
+    <div class="admin-toggle">
+        <button (click)="modeAdmin = !modeAdmin" class="btn-toggle-admin">
+            {{ modeAdmin ? 'Fermer le mode Admin' : '⚙️ Mode Admin' }}
+        </button>
+    </div>
+
+    <!-- Formulaire d'administration (Ajout / Modification) -->
+    <div *ngIf="modeAdmin" class="admin-form-card">
+        <h3>{{ enModeEdition ? 'Modifier l\'événement' : 'Ajouter un nouvel événement' }}</h3>
+        <!-- Utilisation de (ngSubmit) pour déclencher la sauvegarde -->
+        <form (ngSubmit)="sauvegarderEvenement()">
+            <input type="text" placeholder="Titre" [(ngModel)]="evenementEnCours.titre" name="titre" required>
+            <input type="date" [(ngModel)]="evenementEnCours.date" name="date" required>
+            <input type="text" placeholder="Lieu" [(ngModel)]="evenementEnCours.lieu" name="lieu" required>
+            <textarea placeholder="Description" [(ngModel)]="evenementEnCours.description" name="description" required></textarea>
+            
+            <div class="form-actions">
+                <button type="submit" class="btn-save">Enregistrer</button>
+                <button type="button" (click)="modeAdmin = false" class="btn-cancel">Annuler</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Onglets (Masqués si en mode admin pour plus de clarté) -->
+    <div class="tabs" *ngIf="!modeAdmin">
+        <button 
+            [class.active]="ongletActif === 'futur'" 
+            (click)="ongletActif = 'futur'">
+            À venir
+        </button>
+        <button 
+            [class.active]="ongletActif === 'passe'" 
+            (click)="ongletActif = 'passe'">
+            Passés
+        </button>
+    </div>
+
+    <!-- Liste des événements -->
+    <div class="events-list" *ngIf="!modeAdmin">
+        <div *ngFor="let ev of evenementsFiltres" class="event-card">
+            <div class="event-date">{{ ev.date }}</div>
+            <div class="event-details">
+                <h3>{{ ev.titre }}</h3>
+                <p class="event-location">📍 {{ ev.lieu }}</p>
+                <p>{{ ev.description }}</p>
+            </div>
+            
+            <!-- Actions Admin visibles même pour le visiteur pour l'instant (vous pourrez le restreindre plus tard) -->
+            <div class="admin-actions">
+                <button (click)="ouvrirFormulaireEdition(ev)" class="btn-edit">Modifier</button>
+                <button (click)="supprimer(ev.id)" class="btn-delete">Supprimer</button>
+            </div>
+        </div>
+
+        <!-- Message si aucun événement -->
+        <div *ngIf="evenementsFiltres.length === 0" class="no-events">
+            Aucun événement à afficher dans cette catégorie pour le moment.
+        </div>
+    </div>
+</div>
