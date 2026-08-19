@@ -2,7 +2,7 @@
 
 Un site vitrine en construction pour le groupement forestier La Terre sous la Plume
 
-🔗 **Visualisation en ligne (Netlify) :** [Visiter l'application](https://leafy-twilight-cfa1b9.netlify.app)
+🔗 **Visualisation en ligne (Netlify) :** [Visiter l'application](https://sprightly-axolotl-28a41d.netlify.app)
 
 ## À propos du projet
 
