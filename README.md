@@ -1,25 +1,43 @@
-# SWaldala
+# S-Waldala
 
-Un site vitrine en construction pour le groupement forestier La Terre sous la Plume
+Site vitrine développé bénévolement pour le groupement forestier La Terre sous la Plume.
 
-🔗 **Visualisation en ligne (Netlify) :** [Visiter l'application](https://sprightly-axolotl-28a41d.netlify.app)
+🔗 **Démo en ligne :** [sprightly-axolotl-28a41d.netlify.app](https://sprightly-axolotl-28a41d.netlify.app)
+
+---
 
 ## À propos du projet
 
-Site développé bénévolement pour permettre à le groupement de présenter ses idées, 
-ses actions et ses valeurs. Projet en cours de développement actif.
+Site conçu pour permettre au groupement de présenter ses idées, ses actions et ses
+valeurs liées à la préservation des forêts. Projet bénévole, mené en autonomie,
+en cours de développement actif.
+
+---
 
 ## Stack technique
 
-- **Framework** : Angular 20
-- **Déploiement** : Netlify (CI/CD automatique depuis GitHub)
-- **Versioning** : Git
+| Composant | Technologie |
+|-----------|------------|
+| Framework | Angular 20 |
+| Déploiement | Netlify (CI/CD automatique depuis GitHub) |
+| Versioning | Git |
+
+---
 
 ## Lancer le projet en local
 
+### Prérequis
+
+- Node.js ≥ 20
+- Angular CLI : `npm install -g @angular/cli`
+
+### Installation
+
 ```bash
+git clone https://github.com/Teobth/forest.git
+cd forest
 npm install
 ng serve
 ```
 
-Accéder ensuite à `http://localhost:4200`
+Accéder ensuite à `http://localhost:4200`.
