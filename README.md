@@ -1,60 +1,43 @@
-# SWaldala
+# S-Waldala
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.0.
+Site vitrine développé bénévolement pour le groupement forestier La Terre sous la Plume.
 
-## Development server
+🔗 **Démo en ligne :** [sprightly-axolotl-28a41d.netlify.app](https://sprightly-axolotl-28a41d.netlify.app)
 
-To start a local development server, run:
+---
+
+## À propos du projet
+
+Site conçu pour permettre au groupement de présenter ses idées, ses actions et ses
+valeurs liées à la préservation des forêts. Projet bénévole, mené en autonomie,
+en cours de développement actif.
+
+---
+
+## Stack technique
+
+| Composant | Technologie |
+|-----------|------------|
+| Framework | Angular 20 |
+| Déploiement | Netlify (CI/CD automatique depuis GitHub) |
+| Versioning | Git |
+
+---
+
+## Lancer le projet en local
+
+### Prérequis
+
+- Node.js ≥ 20
+- Angular CLI : `npm install -g @angular/cli`
+
+### Installation
 
 ```bash
+git clone https://github.com/Teobth/forest.git
+cd forest
+npm install
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
-# forest
+Accéder ensuite à `http://localhost:4200`.
