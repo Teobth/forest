@@ -55,3 +55,14 @@ h2 {
     padding-bottom: 10px;
     margin-top: 0;
 }
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px; /* Espace entre le logo et le titre */
+}
+
+.main-logo {
+    max-width: 200px; /* Ajustez la taille selon vos besoins */
+    height: auto;
+    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3)); /* Ajoute un léger ombrage pour la lisibilité sur fond sombre */
+}
