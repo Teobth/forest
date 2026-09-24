@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: '../css/foretGestion.css'
 })
 export class gestionComponent {
-  protected titrePage = "La Gestion de la Forêt : Échappée Sylvestre";
+  protected titrePage = "Les forêts en gestion : Échappée Sylvestre";
 }

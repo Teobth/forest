@@ -23,21 +23,3 @@ en cours de développement actif.
 | Versioning | Git |
 
 ---
-
-## Lancer le projet en local
-
-### Prérequis
-
-- Node.js ≥ 20
-- Angular CLI : `npm install -g @angular/cli`
-
-### Installation
-
-```bash
-git clone https://github.com/Teobth/forest.git
-cd forest
-npm install
-ng serve
-```
-
-Accéder ensuite à `http://localhost:4200`.
